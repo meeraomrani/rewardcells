@@ -8,11 +8,11 @@ INPUTS: Calcium Imaged 2D-video data collected from the CA1 region of awake, beh
   Raw Calcium Data: 
   
   
-       ![raw_cal](rmimages/GH_RC.tif)
+   ![raw_cal](rmimages/GH_RC.tif)
        
        
   Aerial Video:
   
   
-       ![air_cap](rmimages/GH_AC.png)
+   ![air_cap](rmimages/GH_AC.png)
                              
