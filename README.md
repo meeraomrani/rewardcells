@@ -6,8 +6,13 @@ INPUTS: Calcium Imaged 2D-video data collected from the CA1 region of awake, beh
                              Aerial video data captured above the arena during each training session 
                             
   Raw Calcium Data: 
-       ![raw_cal](rmimages/GH RC.tif)
+  
+  
+       ![raw_cal](rmimages/GH_RC.tif)
+       
        
   Aerial Video:
+  
+  
        ![air_cap](rmimages/GH_AC.png)
                              
