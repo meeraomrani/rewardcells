@@ -27,12 +27,21 @@ Calcium data:
 Calcium data: 
 Pre-processing stages ---> cell identification (WRITE AT ALL) 
 
+![air_cap](rmimages/CIpreprocessing.PNG)  
+![air_cap](rmimages/trace.png)
+![air_cap](rmimages/events.png)  
+
 Positional data:
 - DeepLabCut (Deep Neural Network for Pose Estimation) is trained on a set of frames from the aerial videos with the animals head identifed, DeepLabCut is then run on all videos    for each animal for pose estimation
 - Secondary sorting is completed via a semi-automated algorithm flagging frame-to-frame transitions where the animal is moving at unrealistic speeds (via OpenCV)
 - Coordinates are translated s.t. the bottom left corner of the arena is (0,0)
 - The output is frame-by-frame series of (x,y) coordinates 
 Pose estimated image and correction figure: 
+
+![air_cap](rmimages/DLCfig.png)
+![air_cap](rmimages/corrected_DLC.png)
+
+
 
 ## **EVENT OCCUPANCY MAPS:**
 
@@ -41,6 +50,7 @@ Events are spatially binned (10x10cm^2)
 Heat map generated (normalised by spatial occupancy and passed through gaussian filter) 
 
 Exemplar event occupancy map: 
+![air_cap](rmimages/eventocc.png)
 
 
 
@@ -51,12 +61,20 @@ Within the bin the centre of all events is found - this represents the place fie
 
 ## **MUTUAL INFORMATION ESTIMATION:**
 
+Mutual Information calculted via Entropy:
+![air_cap](rmimages/entropydefn.PNG)
+
 Estimators: Centralised Dirilecht Mixture, Kraskov, Plug-in 
 MI(N,S) s.t. N:=Neuron events for a given neuron (as time-series), S:=(x,y) coordinates for a given session 
+
+![air_cap](rmimages/MIpipeline.PNG)
+
+![air_cap](rmimages/CDMfig.PNG)
 
 For all cells that meet pre-sorting criteria, the mutual information of each cell is calculated and the mutual information of shuffled distributions (s=1000) is calculated.
 If the cells MI falls in the 95th percentile of the shuffled dist => cell = place cell 
 
 Example cell + percentile: 
+![air_cap](rmimages/MIplacecell.png)
 
 
